@@ -1,3 +1,2 @@
-# my portfolio
-this is my portfolio
-update the file
+# these are my first protractor scripts
+committed to git repo
