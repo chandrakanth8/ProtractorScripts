@@ -145,7 +145,7 @@ it('should add 2 and 3', function()
 
 });
 
-
+/*
 
 
 describe('count the number of rows in history', function()
@@ -187,4 +187,5 @@ describe('count the number of rows in history', function()
 
 });
 
+*/
 
