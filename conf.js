@@ -1,10 +1,9 @@
 var HtmlReporter = require('protractor-beautiful-reporter');
 
-
 exports.config = {
 
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['spec.js']
+    specs: ['spec.js'],
 
     onPrepare: function() {
         
@@ -12,5 +11,5 @@ exports.config = {
            baseDirectory: 'Reports/screenshots'
         }).getJasmine2Reporter());
      }
-    
+        
 };
