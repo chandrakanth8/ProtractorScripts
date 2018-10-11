@@ -32,16 +32,9 @@ var home_page = require('../ProtractorScripts/homepage.js');
 it('should login as customer', function()
 
 {
-    /*
-    element(by.className('btn btn-primary btn-lg')).click();
-    element(by.cssContainingText('option', 'Harry Potter')).click();
     
-    
-    element(by.className('btn btn-default')).click();
-    */
-
     home_page.clickCustomerLogin();
-    element(by.cssContainingText('option', 'Harry Potter')).click();
+    home_page.selectName();
     element(by.className('btn btn-default')).click();
     var loggedInUser = element(by.xpath('/html/body/div/div/div[2]/div/div[1]/strong'));
     expect(loggedInUser.getText()).toEqual('Welcome Harry Potter !!');
