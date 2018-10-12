@@ -9,10 +9,17 @@ var home_page = function()
     this.selectName = function()
 
     {
-        element(by.id('userSelect')).element(by.css("[value='2']")).click();
-
-
+        element(by.id('userSelect')).element(by.css("[value='1']")).click(); 
+        
     }
 
+    this.nameSelected = function()
+
+{
+    var n = element(by.id('userSelect')).element(by.css("[value='1']"));
+    console.log(n);
+}
+
+    
 };
 module.exports = new home_page();

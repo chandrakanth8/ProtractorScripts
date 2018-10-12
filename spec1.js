@@ -29,7 +29,7 @@ xit('should show text XYZ Bank', function()
 
 var home_page = require('../ProtractorScripts/homepage.js');
 
-it('should login as customer', function()
+xit('should login as customer', function()
 
 {
     
@@ -37,9 +37,26 @@ it('should login as customer', function()
     home_page.selectName();
     element(by.className('btn btn-default')).click();
     var loggedInUser = element(by.xpath('/html/body/div/div/div[2]/div/div[1]/strong'));
-    expect(loggedInUser.getText()).toEqual('Welcome Harry Potter !!');
+    expect(loggedInUser.getText()).toEqual('Welcome Hermoine Granger !!');
 
 });
+
+it('should print all options in dropdown', function()
+
+{
+    home_page.clickCustomerLogin();
+    element.all(by.css('.form-control ng-pristine ng-valid ng-touched option')).each(function(element, index) 
+    {
+        
+        element.getText().then(function (text)
+        {
+          console.log(index, text);
+        });
+      });
+});
+
+
+
 
 
 });
