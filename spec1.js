@@ -29,6 +29,8 @@ xit('should show text XYZ Bank', function()
 
 var home_page = require('../ProtractorScripts/homepage.js');
 
+
+
 xit('should login as customer', function()
 
 {
@@ -41,7 +43,7 @@ xit('should login as customer', function()
 
 });
 
-it('should print all options in dropdown', function()
+xit('should print all options in dropdown', function()
 
 {
     home_page.clickCustomerLogin();
@@ -53,10 +55,29 @@ it('should print all options in dropdown', function()
           console.log(index, text);
         });
       });
+
 });
 
+xit('should login as manager', function()
+{
+    home_page.bankLogin();
+});
 
+var add_Customer = require('../ProtractorScripts/addCustomer.js');
 
+it('should add a customer', function()
 
+{
+    home_page.bankLogin();
+    element(by.buttonText('Add Customer')).click();
+
+    element(by.model('fName')).sendKeys('first');
+        element(by.model('lName')).sendKeys('last');
+        element(by.model('postCd')).sendKeys('784');
+        element(by.css("button[type='submit']")).click();
+    
+    /*    add_Customer.newCustomer('c1','k1', '789');*/
+
+});
 
 });
