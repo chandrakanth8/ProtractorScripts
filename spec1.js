@@ -70,13 +70,13 @@ it('should add a customer', function()
 {
     home_page.bankLogin();
     element(by.buttonText('Add Customer')).click();
+      
+    add_Customer.newCustomer('c1','k1', '789');
 
-    element(by.model('fName')).sendKeys('first');
-        element(by.model('lName')).sendKeys('last');
-        element(by.model('postCd')).sendKeys('784');
-        element(by.css("button[type='submit']")).click();
+    element(by.css("button[class='btnClass3']")).click();
+    var n1 =  element(by.cssContainingText('c1'));
+    expect(n1.getText()).toEqual('c1');
     
-    /*    add_Customer.newCustomer('c1','k1', '789');*/
 
 });
 

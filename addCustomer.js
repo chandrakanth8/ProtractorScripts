@@ -7,7 +7,7 @@ var add_Customer = function()
         element(by.model('fName')).sendKeys(first);
         element(by.model('lName')).sendKeys(last);
         element(by.model('postCd')).sendKeys(pin);
-        element(by.buttonText('Add Customer')).click();
+        element(by.css("button[type='submit']")).click();
 
     }
 
